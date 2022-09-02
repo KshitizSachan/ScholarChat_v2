@@ -1,50 +1,77 @@
-const express=require("express");
-const bodyParser=require("body-parser");
+const express = require('express');
+const session = require('express-session');
+const passport = require('passport');
+var OrcidStrategy = require('passport-orcid').Strategy;
 
-const app= express();
-app.set('view engine', 'ejs');
+// these are needed for storing the user in the session
+passport.serializeUser(function (user, done) {
+  done(null, user)
+})
 
-app.get("/",function(req,res){
-    let today=new Date();
-    let day=today.getDay();
-    let Day;
-    switch(day){
-        case 0: 
-        Day="Sunday";
-        break;
+passport.deserializeUser(function (user, done) {
+  done(null, user)
+})
 
-        case 1: 
-        Day="Monday";
-        break;
+// add the ORCID authentication strategy
+passport.use(new OrcidStrategy({
+  sandbox: true, // remove this to use the production API
+  state: true, // remove this if not using sessions
+  clientID: 'APP-KPRNA1YNG31M58AQ',
+  clientSecret: '03d79811-cc94-4768-a561-b996307b6786',
+  callbackURL: 'http://localhost:5000/auth/orcid/callback'
+}, function (accessToken, refreshToken, params, profile, done) {
+  // `profile` is empty as ORCID has no generic profile URL,
+  // so populate the profile object from the params instead
 
-        case 2: 
-        Day="Tuesday";
-        break;
+  profile = { orcid: params.orcid, name: params.name }
 
-        case 3: 
-        Day="Wednesday";
-        break;
+  return done(null, profile)
+}))
 
-        case 4: 
-        Day="Thursday";
-        break;
+var app = express()
 
-        case 5: 
-        Day="Friday";
-        break;
+app.use(session({ secret: 'foo', resave: false, saveUninitialized: false }))
+app.use('/files', express.static('files'))
 
-        case 6: 
-        Day="Saturday";
-        break;
-    }
-    res.render("list",{key_day:Day})
-});
+app.use(passport.initialize())
+app.use(passport.session())
 
+// show sign in or sign out link
+app.get('/', function (req, res) {
+  if (req.isAuthenticated()) {
+    res.send('<a href="/auth/logout">Sign out</a>')
+  } else {
+    const data_clientid="APP-RIU99EAXIMJAA7TX";
+    res.render('list.ejs',{data_clientid:data_clientid})
+  }
+})
 
-app.listen(3000, function(){
-    console.log("Server Running on port 3000");
-});
+// start authenticating with ORCID
+app.get('/auth/orcid/login', passport.authenticate('orcid'))
 
+// finish authenticating with ORCID
+app.get('/auth/orcid/callback', passport.authenticate('orcid', {
+  successRedirect: '/profile',
+  failureRedirect: '/'
+}))
 
+// sign out
+app.get('/auth/logout', function (req, res) {
+  req.logout()
+  res.redirect('/')
+})
 
+// show the authenticated user's profile data
+app.get('/profile', checkAuth, function (req, res) {
+  res.json(req.user)
+})
 
+function checkAuth (req, res, next) {
+  if (!req.isAuthenticated()) res.redirect('/auth/orcid/login')
+  return next()
+}
+
+app.listen(5000, function (err) {
+  if (err) return console.log(err)
+  console.log('Listening at http://localhost:5000/')
+})
