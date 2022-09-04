@@ -1,16 +1,22 @@
 {
-  "name": "scholar-chat-v2",
+  "name": "scholarchat_v2",
   "version": "1.0.0",
-  "description": "Express ejs server for scholarchat",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Kshitiz Sachan",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KshitizSachan/ScholarChat_v2.git"
+  },
+  "author": "",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KshitizSachan/ScholarChat_v2/issues"
+  },
+  "homepage": "https://github.com/KshitizSachan/ScholarChat_v2#readme",
   "dependencies": {
-    "body-parser": "^1.20.0",
-    "ejs": "^3.1.8",
     "express": "^4.18.1",
     "express-session": "^1.17.3",
     "passport": "^0.6.0",

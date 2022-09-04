@@ -1,7 +1,7 @@
-const express = require('express');
-const session = require('express-session');
-const passport = require('passport');
-var OrcidStrategy = require('passport-orcid').Strategy;
+var express = require('express')
+var session = require('express-session')
+var passport = require('passport')
+var OrcidStrategy = require('passport-orcid').Strategy
 
 // these are needed for storing the user in the session
 passport.serializeUser(function (user, done) {
@@ -41,8 +41,7 @@ app.get('/', function (req, res) {
   if (req.isAuthenticated()) {
     res.send('<a href="/auth/logout">Sign out</a>')
   } else {
-    const data_clientid="APP-RIU99EAXIMJAA7TX";
-    res.render('list.ejs',{data_clientid:data_clientid})
+    res.send('<a href="/auth/orcid/login">Sign in with ORCID</a>')
   }
 })
 
