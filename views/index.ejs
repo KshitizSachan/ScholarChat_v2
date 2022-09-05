@@ -1,6 +1,171 @@
-<main>
+<!-- <main>
  <div class="ui segment">
    <h1>click ze link</h1>
    <a href="/auth/orcid/login">Sign in with ORCID</a>
  </div>
-</main>
+</main> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+ a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+a:hover {
+    color:#ffffff; 
+    text-decoration:none; 
+    cursor:pointer;  
+}
+
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scholar Chat</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+</head>
+
+<body>
+  <!--Navbar Region-->
+
+  <header class="navbar">
+    <div class="container nav1">
+
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
+
+        <ul class="navbar-contents nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li class="li-item"><a href="#" style="font-size: 1rem;" class="nav-link px-2 text-white">SCHOLAR CHAT</a>
+          </li>
+          <li class="li-item"><a href="#" style="font-size: 1rem;" class="nav-link px-2 text-white">Features</a></li>
+          <li class="li-item"><a href="#" style="font-size: 1rem;" class="nav-link px-2 text-white">FAQs</a></li>
+          <li class="li-item"><a href="#" style="font-size: 1rem;" class="nav-link px-2 text-white">About</a></li>
+
+          <li class="login"><a href="/auth/orcid/login"><button type="button " class=" ms-auto btn btn-outline-light me-2 ">Connect with ORCID</button></a></li>
+          <li class="sign-up"><a href="https://scholar-chat-orcid.herokuapp.com/"><button type="button " class=" ms-auto btn btn-outline-light me-2">Login</button></a></li>
+
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- 2nd part of the website -->
+  <div class="container-fluid">
+    
+    <div class="row">
+      <div class="col" style="padding-left: 9.5%;">
+        <h1>Meet new and interesting scholars worldwide.</h1>
+        <div class="row">
+    
+          <div class="col-sm">
+            <img class="logo-image" src="./img/University_of_Agricultural_Science_Raichuru_logo.jpg" alt="logo" width="70%" >
+          </div>
+          <div class="col-sm">
+            <img class="logo-image" src="./img/iiitdwd-logo.png" alt="logo" width="140%">
+            <!-- <img class="logo-image" src="./img/chat.png" alt="logo"> -->
+          </div>
+          
+        </div>
+      </div>
+      <div class="demo-video col">
+        <img class="demo-image" src="./img/demo-image.jpg" alt="iphone-mockup" >
+      </div>
+    </div>
+  </div>
+
+  <!-- </section> -->
+
+
+  <!-- 3rd Part Features -->
+  <section id="features">
+
+    <h2 class="adv-heading">Features</h2>
+
+    <div class="row feature-adv">
+
+      <div class="col-lg-4 advantage-col">
+        <img class="adv-img" src="img/clock.png" alt="">
+        <p>Fast</p>
+      </div>
+
+      <div class="col-lg-4 advantage-col">
+        <img class="adv-img" src="img/shield.png" alt="">
+        <p>Secure</p>
+      </div>
+
+      <div class="col-lg-4 advantage-col">
+        <img class="adv-img" src="img/worldwide.png" alt="">
+        <p>Worldwide</p>
+      </div>
+
+    </div>
+    <!-- </div> -->
+  </section>
+
+
+
+
+  <!-- FAQs-->
+
+
+
+
+  <!-- Footer -->
+  <footer id="footer">
+
+    <div class="contact_us">
+
+      <h3 class="footer_heading">Contact us</h3>
+
+      <div class="row">
+
+        <div class="col col-lg-6 col-md-6 col-sm-12">
+          <div class="address">
+            <p>A-26 , Ittigatti Road</p>
+            <p>near Sattur</p>
+            <p> Dharwad</p>
+            <p>Karnataka, India</p>
+          </div>
+        </div>
+
+        <div class="col col-lg-6 col-md-6 col-sm-12 phone">
+          <p>
+            <i class="fas fa-phone-alt"></i> 1212940523
+          </p>
+          <p>
+            <i class="fas fa-phone-alt"></i> 9472910482
+          </p>
+          <p>
+            <i class="fas fa-phone-alt"></i> 9572491034
+          </p>
+        </div>
+        <div class="footer-logo">
+          <img class="footer-logo-image" src="./img/logo-naac.png" alt="logo">
+          <img class="footer-logo-image" src="./img/iiitdwd-logo.png" alt="logo">
+          <!-- <img class="footer-logo-image" src="" alt="logo"> -->
+        </div>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+</body>
+
+</html>

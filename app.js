@@ -41,6 +41,9 @@ app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded());
 // in latest body-parser use like below.
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.static('public'))
+
+
 
 app.use(session({ secret: "foo", resave: false, saveUninitialized: false }));
 // app.use('/files', express.static('files'))
@@ -111,8 +114,8 @@ app.get("/done", function(req,res) {
 })
 
 const createUser = async (req, res) => {
-  console.log("hit createUser");
-  console.log("user create karnewali api", req);
+  // console.log("hit createUser");
+  // console.log("user create karnewali api", req);
   data["password"] = req.body["password"];
   console.log("data", data);
   try {

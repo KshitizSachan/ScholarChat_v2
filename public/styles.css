@@ -1,0 +1,187 @@
+/* NAVBAR REGION*/
+
+.navbar {
+  background-color: #1572A1;
+  margin: 0 0 0 0;
+}
+
+a {
+  color: inherit;
+}
+
+.login {
+  margin: 0 0 0 0;
+  padding: 0 0 0 15rem;
+}
+
+.sign-up {
+  margin: 0 0 0 0;
+  padding: 0 0 0 1rem;
+}
+
+.li-item {
+  margin: 0 1rem 0 1rem;
+  padding: 0 1rem 0 1rem;
+  align-items: center;
+}
+
+.navbar-contents {
+  padding: 0 0 0 0;
+  margin: 0 0 0 0;
+}
+
+/* Title Section */
+
+
+.row {
+  padding-left: 5%;
+  padding-top: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+
+.container-logo {
+  padding: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.left-section {
+  display: flex;
+  align-items: left;
+  justify-content: center;
+}
+
+.logo-image {
+  padding: 1.5rem;
+  /* height: 100px; */
+}
+
+.demo-video {
+  display: flex;
+  align-items: right;
+  justify-content: center;
+
+}
+
+.demo-image {
+  width: 40%;
+  height: 40%;
+
+}
+
+/* Features */
+
+
+.adv-heading {
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 5%;
+  font-weight: 500;
+  font-size: 2.5rem;
+}
+
+.feature-adv {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.advantage-col {
+  padding-bottom: 13%;
+}
+
+.features-icons {
+  color: blue;
+  /* padding-bottom: 20px; */
+}
+
+.adv-img-s {
+  margin: 10%;
+  width: 43%;
+  border-radius: 100%;
+}
+
+.adv-img {
+  width: 40%;
+  margin: 10%;
+  border-radius: 100%;
+}
+
+
+
+
+
+
+
+
+
+/* FOOTER SECTION */
+
+.address {
+  padding-left: 20%;
+}
+
+.phone {
+  padding-left: 30%;
+  float: right;
+}
+
+.footer_heading {
+  padding: 25px 5% 0 5%;
+  text-align: center;
+}
+
+.copyright {
+  text-align: center;
+  font-size: 10px;
+  margin: 0;
+  padding: 2% 0 1%;
+}
+
+.social_handles {
+  text-align: center;
+}
+
+.social-icon {
+  padding-left: 20px;
+  color: #fff;
+}
+
+.social-icon:hover {
+  color: #9AD0EC;
+
+
+}
+
+.contact_us {
+  background-color: #1572A1;
+  color: #fff;
+}
+
+.copyright-2 {
+  text-align: center;
+  font-size: 10px;
+  margin: 0;
+  padding-bottom: 2%;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.footer-logo-image {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+  height: 100px;
+  border-radius: 10%;
+}
