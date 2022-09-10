@@ -151,7 +151,7 @@ function checkAuth(req, res, next) {
   return next();
 }
 
-app.listen(5000, function (err) {
+app.listen(process.env.PORT || 5000, function (err) {
   if (err) return console.log(err);
   console.log("Listening at http://localhost:5000/");
 });
