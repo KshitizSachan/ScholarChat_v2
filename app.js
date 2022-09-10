@@ -18,11 +18,10 @@ passport.deserializeUser(function (user, done) {
 passport.use(
   new OrcidStrategy(
     {
-      sandbox: true, // remove this to use the production API
       state: true, // remove this if not using sessions
-      clientID: "APP-KPRNA1YNG31M58AQ",
-      clientSecret: "03d79811-cc94-4768-a561-b996307b6786",
-      callbackURL: "http://localhost:5000/auth/orcid/callback",
+      clientID: "APP-RIU99EAXIMJAA7TX",
+      clientSecret: "ff079043-138a-467f-9491-63899cab2ece",
+      callbackURL: "https://scholar-chat-home.herokuapp.com/auth/orcid/callback",
     },
     function (accessToken, refreshToken, params, profile, done) {
       // `profile` is empty as ORCID has no generic profile URL,
