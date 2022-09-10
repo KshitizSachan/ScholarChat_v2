@@ -53,7 +53,7 @@ app.use(passport.session());
 // show sign in or sign out link
 app.get("/", function (req, res) {
   if (req.isAuthenticated()) {
-    res.send('<a href="/auth/logout">Sign out</a>');
+    res.send('index');
   } else {
     // res.send('<a href="/auth/orcid/login">Sign in with ORCID</a>')
     res.render("index");
@@ -106,17 +106,9 @@ app.get("/done", function(req,res) {
   console.log('statusCode =',statusCode)
   if (statusCode != '404' & statusCode != -1){
     res.render('success')
-    req.logout(function(err) {
-      if (err) { return next(err); }
-      // res.redirect('/');
-    });
   }
   else{
     res.render('error')
-    req.logout(function(err) {
-      if (err) { return next(err); }
-      // res.redirect('/');
-    });
   }
 })
 
