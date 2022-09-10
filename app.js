@@ -117,9 +117,9 @@ const createUser = async (req, res) => {
   // console.log("hit createUser");
   // console.log("user create karnewali api", req);
   data["password"] = req.body["password"];
-  console.log("data", data);
+  // console.log("data", data);
   try {
-    console.log("before req");
+    // console.log("before req");
     // const res = await axios.post('https://scholar-chat-orcid.herokuapp.com/api/oauthData', data);
 
     const response = await axios({
@@ -131,14 +131,14 @@ const createUser = async (req, res) => {
       },
     });
 
-    console.log("done waiting..");
-    console.log(`Status: ${response.status}`);
+    // console.log("done waiting..");
+    // console.log(`Status: ${response.status}`);
     statusCode = response.status
     
     res.send(200);
     // console.log('Body: ', res.data);
   } catch (err) {
-    console.error("error11", err["response"]);
+    // console.error("error11", err["response"]);
     statusCode = res.status
     res.send(404);
   }
