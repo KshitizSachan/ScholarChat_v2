@@ -106,9 +106,17 @@ app.get("/done", function(req,res) {
   console.log('statusCode =',statusCode)
   if (statusCode != '404' & statusCode != -1){
     res.render('success')
+    req.logout(function(err) {
+      if (err) { return next(err); }
+      // res.redirect('/');
+    });
   }
   else{
     res.render('error')
+    req.logout(function(err) {
+      if (err) { return next(err); }
+      // res.redirect('/');
+    });
   }
 })
 
