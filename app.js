@@ -1,9 +1,11 @@
-var express = require("express");
-var session = require("express-session");
-var passport = require("passport");
-var OrcidStrategy = require("passport-orcid").Strategy;
+const express = require("express");
+const  passport = require("passport");
+const session = require("express-session");
+const  OrcidStrategy = require("passport-orcid").Strategy;
 const axios = require("axios");
-var bodyParser = require("body-parser");
+const  bodyParser = require("body-parser");
+const path=require('path')
+
 
 // these are needed for storing the user in the session
 passport.serializeUser(function (user, done) {
@@ -34,7 +36,8 @@ passport.use(
   )
 );
 
-var app = express();
+const app = express();
+app.use(express.static(path.join(__dirname, 'public')))
 app.set("view engine", "ejs");
 app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded());
@@ -53,7 +56,7 @@ app.use(passport.session());
 // show sign in or sign out link
 app.get("/", function (req, res) {
   if (req.isAuthenticated()) {
-    res.send('index');
+    res.render('index');
   } else {
     // res.send('<a href="/auth/orcid/login">Sign in with ORCID</a>')
     res.render("index");
@@ -74,14 +77,14 @@ app.get(
 
 // sign out
 app.get("/auth/logout", function (req, res) {
-  req.logout(function(err) {
+  req.logout(function (err) {
     if (err) { return next(err); }
     res.redirect('/');
   });
 
 });
 
-var data = {};
+let data = {};
 
 // show the authenticated user's profile data
 app.get("/profile", checkAuth, function (req, res) {
@@ -100,14 +103,14 @@ app.get("/success", function (req, res) {
   res.render("success");
 });
 
-var statusCode = -1;
+let statusCode = -1;
 
-app.get("/done", function(req,res) {
-  console.log('statusCode =',statusCode)
-  if (statusCode != '404' & statusCode != -1){
+app.get("/done", function (req, res) {
+  console.log('statusCode =', statusCode)
+  if (statusCode != '404' & statusCode != -1) {
     res.render('success')
   }
-  else{
+  else {
     res.render('error')
   }
 })
@@ -133,7 +136,7 @@ const createUser = async (req, res) => {
     // console.log("done waiting..");
     // console.log(`Status: ${response.status}`);
     statusCode = response.status
-    
+
     res.send(200);
     // console.log('Body: ', res.data);
   } catch (err) {

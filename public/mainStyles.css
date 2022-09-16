@@ -1,0 +1,201 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* navbar */
+
+.navbar-brand {
+    margin-left: 5rem;
+}
+
+.nav-link {
+    color: #fff !important;
+}
+
+.navbar {
+    background-color: #1572A1;
+    margin: 0 0 0 0;
+}
+
+.login {
+    margin: 0 1rem 0 0;
+    padding: 0 0 0 19rem;
+}
+
+.sign-up {
+    margin: 0 1rem 0 0;
+    padding: 0 0 0 1rem;
+}
+
+/* section1 */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.heading {
+    padding: 5rem;
+    text-align: center;
+}
+
+.demo-image {
+    margin: 5rem 15rem 5rem 10rem;
+    width: 18rem;
+    height: 36rem;
+    border-radius: 10%;
+
+}
+
+/* Features section */
+.feature-adv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.advantage-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 4rem 10rem;
+}
+
+
+.features-description {
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.adv-img {
+    width: 10rem;
+}
+
+
+/* faqs */
+
+.faqs {
+    display: inline-block;
+    justify-content: center;
+    padding: 5rem 4rem 5rem 7rem;
+}
+
+/* footer */
+#about {
+    background-color: #1572A1;
+    color: #fff;
+}
+
+#about h2 {
+    text-align: center;
+    padding: 2rem 0;
+
+}
+
+#about li {
+    list-style: none;
+}
+
+.contact_us,
+.address {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.footer-container {
+    padding: 0 5rem;
+}
+
+.copyright {
+    padding: 1rem;
+    margin: 0;
+    text-align: center;
+}
+
+
+
+
+
+/* responsiveness */
+@media screen and (max-width:720px) {
+    body {
+        width: auto;
+    }
+
+    .hero-section {
+        display: block;
+    }
+
+    .nav-link {
+        margin-left: 1rem;
+    }
+
+    .navbar-brand {
+        margin-left: 1rem;
+    }
+
+    .login {
+        margin: 0 1rem 0 0;
+        padding: 1rem 0 1rem 1rem;
+    }
+
+    .sign-up {
+        margin: 0 1rem 0 0;
+        padding: 0 0 1rem 1rem;
+    }
+
+    .heading {
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    .logo-image {
+        width: 10rem;
+    }
+
+    .demo-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        width: auto;
+        height: 36rem;
+        border-radius: 10%;
+
+    }
+
+    /* features section */
+
+    .advantage-col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 2rem 0;
+    }
+
+    .adv-img {
+        width: 6rem;
+    }
+
+    .feature-adv {
+        flex-direction: column;
+    }
+
+    .footer-container {
+        padding: 0;
+    }
+}

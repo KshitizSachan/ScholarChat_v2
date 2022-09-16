@@ -1,35 +1,5 @@
 /* NAVBAR REGION*/
 
-.navbar {
-  background-color: #1572A1;
-  margin: 0 0 0 0;
-}
-
-a {
-  color: inherit;
-}
-
-.login {
-  margin: 0 0 0 0;
-  padding: 0 0 0 15rem;
-}
-
-.sign-up {
-  margin: 0 0 0 0;
-  padding: 0 0 0 1rem;
-}
-
-.li-item {
-  margin: 0 1rem 0 1rem;
-  padding: 0 1rem 0 1rem;
-  align-items: center;
-}
-
-.navbar-contents {
-  padding: 0 0 0 0;
-  margin: 0 0 0 0;
-}
-
 /* Title Section */
 
 
@@ -62,18 +32,7 @@ a {
   /* height: 100px; */
 }
 
-.demo-video {
-  display: flex;
-  align-items: right;
-  justify-content: center;
 
-}
-
-.demo-image {
-  width: 40%;
-  height: 40%;
-
-}
 
 /* Features */
 
@@ -108,7 +67,7 @@ a {
 }
 
 .adv-img {
-  width: 40%;
+  width: 2rem;
   margin: 10%;
   border-radius: 100%;
 }
@@ -185,3 +144,8 @@ a {
   height: 100px;
   border-radius: 10%;
 }
+
+
+
+/* media queries */
+
