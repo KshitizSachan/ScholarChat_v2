@@ -63,6 +63,16 @@ app.get("/", function (req, res) {
   }
 });
 
+
+app.get("/team", function (req, res) {
+  if (req.isAuthenticated()) {
+    res.render('teams_page');
+  } else {
+    // res.send('<a href="/auth/orcid/login">Sign in with ORCID</a>')
+    res.render("teams_page");
+  }
+});
+
 // start authenticating with ORCID
 app.get("/auth/orcid/login", passport.authenticate("orcid"));
 
