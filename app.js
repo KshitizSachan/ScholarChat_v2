@@ -1,10 +1,10 @@
 const express = require("express");
-const  passport = require("passport");
+const passport = require("passport");
 const session = require("express-session");
-const  OrcidStrategy = require("passport-orcid").Strategy;
+const OrcidStrategy = require("passport-orcid").Strategy;
 const axios = require("axios");
-const  bodyParser = require("body-parser");
-const path=require('path')
+const bodyParser = require("body-parser");
+const path = require('path')
 
 
 // these are needed for storing the user in the session
