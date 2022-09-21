@@ -115,6 +115,10 @@ body {
 
 }
 
+.footer-container__header {
+    margin-left: 2.5rem;
+}
+
 .footer-container {
     padding: 0 5rem;
 }
