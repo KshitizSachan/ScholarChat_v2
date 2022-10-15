@@ -54,6 +54,18 @@ body {
     border-radius: 10%;
 
 }
+.logo-main-1{
+    height: 7rem;
+    padding-left: 5rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+}
+
+.logo-main-2{
+    height: 7rem;
+    padding-bottom: 1rem;
+}
+
 
 /* Features section */
 .feature-adv {

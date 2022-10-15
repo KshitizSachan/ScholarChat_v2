@@ -27,14 +27,18 @@
     integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
     crossorigin="anonymous"></script>
 
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
   <!-- font awesone -->
   <script defer src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"></script>
 </head>
 
 <body>
-  <!-- <div class="container-fluid"> -->
+
+  <!-- <div class="container-fluid"> 
   <div>
-    <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark">
       <a class="navbar-brand" href="">Scholar Chat</a>
 
@@ -64,18 +68,20 @@
                 class=" ms-auto btn btn-outline-light me-2">Login</button></a></li>
         </ul>
       </div>
-    </nav>
+    </nav> -->
     <!-- navbar end -->
 
-
+<%- include('partials/navbar') %>
 
     <!-- hero section -->
-    <div class="hero-section">
-      <div>
-        <h1 class="heading">Meet new and interesting scholars worldwide.</h1>
+    <div class="hero-section row">
+      <div class="col-lg-6">
+        <h1 class="heading main-sub">Meet new and interesting scholars worldwide.</h1>
+        <img class="logo-main-1 " src="img\University_of_Agricultural_Science_Raichuru_logo.jpg" alt="chat-mockup">
+        <img class="logo-main-2 " src="img\iiitdwd-logo.png" alt="chat-mockup">
       </div>
-      <div>
-        <img class="demo-image" src="img/demo-image.jpg" alt="chat-mockup">
+      <div class="col-lg-6">
+        <img class="demo-image " src="img/demo-image.jpg" alt="chat-mockup">
       </div>
     </div>
   </div>
@@ -87,19 +93,19 @@
   <!-- features section -->
   <section id="features">
     <h2 class="heading">Features</h2>
-    <div class="feature-adv">
+    <div class="feature-adv row">
 
-      <div class="advantage-col">
+      <div class="advantage-col col-lg-4">
         <img class="adv-img" src="img/clock.png" alt="">
         <p class="features-description">Fast</p>
       </div>
 
-      <div class="advantage-col">
+      <div class="advantage-col col-lg-4">
         <img class="adv-img" src="img/shield.png" alt="">
         <p class="features-description">Secure</p>
       </div>
 
-      <div class="advantage-col">
+      <div class="advantage-col col-lg-4">
         <img class="adv-img" src="img/worldwide.png" alt="">
         <p class="features-description">Worldwide</p>
       </div>
@@ -138,8 +144,10 @@
 
 
 
+  <%- include('partials/footer') %>
 
   <!-- Footer section -->
+<!--   
   <footer id="about">
     <h2>About us</h2>
     <div class="contact_us">
@@ -170,7 +178,7 @@
       </div>
     </div>
     <p class="copyright">© Copyright 2022 Velocity</p>
-  </footer>
+  </footer> -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
     crossorigin="anonymous"></script>
