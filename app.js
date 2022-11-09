@@ -56,10 +56,10 @@ app.use(passport.session());
 // show sign in or sign out link
 app.get("/", function (req, res) {
   if (req.isAuthenticated()) {
-    res.render('index');
+    res.render('index.ejs');
   } else {
     // res.send('<a href="/auth/orcid/login">Sign in with ORCID</a>')
-    res.render("index");
+    res.render("index.ejs");
   }
 });
 
@@ -163,7 +163,7 @@ function checkAuth(req, res, next) {
   return next();
 }
 
-app.listen(process.env.PORT || 5000, function (err) {
+app.listen(process.env.PORT || 3000, function (err) {
   if (err) return console.log(err);
-  console.log("Listening at http://localhost:5000/");
+  console.log("Listening at http://localhost:3000/");
 });

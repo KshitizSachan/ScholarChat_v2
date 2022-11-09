@@ -3,96 +3,89 @@ body {
     padding: 0;
 }
 
-
 /* navbar */
-
-.navbar-brand {
-    margin-left: 5rem;
+.bg{
+    background-color: #2d8dd6;
 }
 
-.nav-link {
-    color: #fff !important;
+.navbar-brand{
+    color:white;
+    font-size: 1.5rem;
+    margin-left:4rem ;
 }
-
-.navbar {
-    background-color: #1572A1;
-    margin: 0 0 0 0;
+.navbar-nav li{
+    padding: 0.5rem;
 }
-
-.login {
-    margin: 0 1rem 0 0;
-    padding: 0 0 0 19rem;
-}
-
-.sign-up {
-    margin: 0 1rem 0 0;
-    padding: 0 0 0 1rem;
+.nav-link{
+    color: white;
+    font-size: 1rem;
 }
 
 /* section1 */
-.hero-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.heading {
-    padding: 5rem;
-    text-align: center;
+.container{
+    margin-top: 5rem;
+    width: 100%;
+    height: 45rem;
 }
 
 .demo-image {
-    margin: 5rem 15rem 5rem 10rem;
     width: 18rem;
     height: 36rem;
-    border-radius: 10%;
+    border-radius: 5%;
+    transform: rotate(-20deg);
+}
 
+.logos{
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .logo-main-1{
     height: 7rem;
-    padding-left: 5rem;
-    padding-right: 2rem;
-    padding-bottom: 1rem;
 }
 
 .logo-main-2{
     height: 7rem;
-    padding-bottom: 1rem;
+
 }
 
+.heading{
+    font-family: 'Rubik', sans-serif;
+    font-size: 4rem;
+    text-align: left;
+    margin: 0;
+}
+.subheading{
+    font-family: 'Rubik', sans-serif;
+    font-size: 2rem;
+    text-align: left;
+    margin: 0;
+}
 
 /* Features section */
-.feature-adv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+.heading-2{
+    text-align: center;
+    font-size: 3rem;
+    font-family: 'Rubik';
+    padding: 5rem;
 }
 
-.advantage-col {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 4rem 10rem;
+.container-2{
+    height: 20rem;
 }
 
 
 .features-description {
     padding: 1rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 500;
-}
+} 
 
 .adv-img {
-    width: 10rem;
-}
+    width: 8rem;
+}  
 
 
 /* faqs */
@@ -100,12 +93,22 @@ body {
 .faqs {
     display: inline-block;
     justify-content: center;
-    padding: 5rem 4rem 5rem 7rem;
+    padding-left:9rem;
+    padding-top: 2rem;
+    padding-bottom:5rem ;
+} 
+
+.heading-3{
+    padding: 5rem;
+    font-size: 2rem;
+    text-align: center;
+    font-family: 'Rubik';
 }
 
+
 /* footer */
-#about {
-    background-color: #1572A1;
+ #about {
+    background-color: #2d8dd6;
     color: #fff;
 }
 
@@ -145,7 +148,7 @@ body {
 
 
 
-/* responsiveness */
+/*
 @media screen and (max-width:720px) {
     body {
         width: auto;
@@ -193,7 +196,7 @@ body {
 
     }
 
-    /* features section */
+ 
 
     .advantage-col {
         display: flex;
@@ -214,4 +217,4 @@ body {
     .footer-container {
         padding: 0;
     }
-}
+} */
